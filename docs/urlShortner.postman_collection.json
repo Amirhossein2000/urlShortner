@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "1bf4edce-361a-48db-9fb7-2ab67245dbf7",
+		"name": "urlShortner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6093957"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"url\":\"https://www.google.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{Address}}/shorten",
+					"protocol": "http",
+					"host": [
+						"{{Address}}"
+					],
+					"path": [
+						"shorten"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"url\":\"https://www.google.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Address}}/shorten",
+							"protocol": "http",
+							"host": [
+								"{{Address}}"
+							],
+							"path": [
+								"shorten"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 Mar 2023 23:38:45 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "18"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"short_url\": \"a\"\n}"
+				},
+				{
+					"name": "custom_url",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"url\":\"https://www.google.com\",\n    \"custom_url\":\"helloGoogle\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{Address}}/shorten",
+							"protocol": "http",
+							"host": [
+								"{{Address}}"
+							],
+							"path": [
+								"shorten"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 Mar 2023 23:40:03 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"short_url\": \"helloGoogle\"\n}"
+				}
+			]
+		},
+		{
+			"name": "redirect",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{Address}}/a",
+					"protocol": "http",
+					"host": [
+						"{{Address}}"
+					],
+					"path": [
+						"a"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "redirect",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{Address}}/a",
+							"protocol": "http",
+							"host": [
+								"{{Address}}"
+							],
+							"path": [
+								"a"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "Mon, 01 Jan 1990 00:00:00 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 Mar 2023 23:41:07 GMT"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "unsafe-none"
+						},
+						{
+							"key": "Permissions-Policy",
+							"value": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-platform=*, ch-ua-platform-version=*"
+						},
+						{
+							"key": "Accept-CH",
+							"value": "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-site"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "require-trusted-types-for 'script';report-uri /_/ConsentHttp/cspreport"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "script-src 'report-sample' 'nonce-uuk98f47az7tfgpvHIcM9Q' 'unsafe-inline';object-src 'none';base-uri 'self';report-uri /_/ConsentHttp/cspreport;worker-src 'self'"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Server",
+							"value": "ESF"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Alt-Svc",
+							"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"nl\" dir=\"ltr\">\n    <head>\n        <style nonce=\"L6X0sovlIdxGlrKYXRkzIg\">\na, a:link, a:visited, a:active, a:hover {\n  color: #1a73e8;\n  text-decoration: none;\n}\nbody {\n  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;\n  text-align: center;\n  -ms-text-size-adjust: 100%;\n  -moz-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%;\n}\n.box {\n  border: 1px solid #dadce0;\n  box-sizing: border-box;\n  border-radius: 8px;\n  margin: 24px auto 5px auto;\n  max-width: 800px;\n  padding: 24px;\n}\nh1 {\n  color: #2c2c2c;\n  font-size: 24px;\n  hyphens: auto;\n  margin: 24px 0;\n}\n.icaCallout {\n  background-color: #f8f9fa;\n  padding: 12px 16px;\n  border-radius: 10px;\n  margin-bottom: 10px;\n}\np, .sub, .contentText, .icaCallout {\n  color: #5f6368;;\n  font-size: 14px;\n  line-height: 20px;\n  letter-spacing: 0.2px;\n  text-align: left;\n}\n.signin {\n  text-align: right;\n}\n.saveButtonContainer,\n.saveButtonContainerNarrowScreen {\n  width: 100%;\n  margin-top: 12px;\n}\n.customButtonContainer {\n  height: 20px;\n  padding: 8px 0;\n  margin-top: 8px;\n}\n.navigationCtasYoutube {\n  text-align: right;\n}\na.button {\n  color: #fff;\n}\na.hairlinebutton,\na.nolinebutton{\n  color: #1a73e8;\n}\n.navigationCtasYoutube a.hairlinebutton {\n  border-color: #1a73e8;\n}\nbutton, .button {\n  background-color: #1a73e8;\n  border: none;\n  color: #fff;\n}\ninput.button {\n  -webkit-appearance: none;\n}\n.basebutton {\n  border-radius: 4px;\n  cursor: pointer;\n  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;\n  font-size: 14px;\n  font-weight: 500;\n  height: 36px;\n  margin: 12px 4px 0;\n  padding: 8px 24px;\n}\n.hairlinebutton {\n  background-color: #fff;\n  border-width: 1px;\n  border-color: #dadce0;\n  border-style: solid;\n  max-height: 15px;\n}\n.error {\n  border: 2px solid #d93025;\n  border-radius: 5px;\n  color: #d93025;\n  margin: auto;\n  padding: 5px;\n}\n.box a:hover, .detailspage a:hover {\n  text-decoration: underline;\n}\n.footer {\n  margin-top: 16px;\n}\n.footer a {\n  margin-left: 24px;\n  white-space: nowrap;\n}\n.footer a, .footer select, .footer input {\n  color: #757575;\n  font-size: 12px;\n}\n.languagepicker {\n  display: inline-flex;\n  margin: 2px 0;\n}\n#languageform,\n#languageselect {\n  margin: 0 2px;\n}\n#languageselect {\n  color: #757575;\n}\n.detailspage {\n  margin: 24px auto 0 auto;\n  max-width: 700px;\n}\n.detailspage h1, .detailspage h2 {\n  font-size: 22px\n}\n.setting {\n  border: 1px solid #dadce0;\n  box-sizing: border-box;\n  border-radius: 8px;\n  margin-bottom: 11px;\n  padding: 24px 24px 20px 24px;\n  text-align: right;\n}\n.sub {\n  padding: 24px 24px 20px 24px;\n}\nhr {\n  margin: 12px -24px 12px;\n  border: 0;\n  border-top: 1px solid #dadce0;\n}\nfieldset {\n  border: none;\n  padding: 0;\n}\nlabel {\n  margin: 24px;\n}\ntd {\n  vertical-align: top;\n}\n.setting h2, .setting h3, h4 {\n  color: #3c4043;\n  margin: 0;\n  text-align: left;\n}\n.yt-text {\n  color: #5f6368;\n  font-size: 14px;\n  font-weight: 300;\n}\n.productLogoContainer {\n  margin: auto;\n  max-width: 360px;\n}\n\n/** Narrow screen (for example a mobile device). */\n@media only screen and (max-width: 480px) {\n  body {\n    margin: 18px 14px;\n  }\n  .footer form {\n    margin-bottom: 3px;\n  }\n  .imgContainer {\n    min-width: 96px;\n  }\n  button, .button {\n    width:100%;\n  }\n  .basebutton {\n    margin: 12px 0 0;\n  }\n  .hideOnSmallWidth {\n    display: none;\n  }\n  .saveButtonContainerNarrowScreen {\n    display: inline-block;\n  }\n  .saveButtonContainer {\n    display: none;\n  }\n  .navigationCtasYoutube a.hairlinebutton {\n    display: block;\n    text-align: center;\n  }\n}\n\n@media only screen and (max-width: 380px) {\n  .imgContainer {\n    min-width: 72px;\n  }\n}\n\n/** Normal/non-narrow screen. */\n@media not screen and (max-width: 480px) {\n  body {\n    margin: 18px 25px;\n  }\n  .footer form {\n    display: inline;\n  }\n  .imgContainer {\n    width: 51%;\n  }\n  button, .button {\n    width: auto;\n  }\n  .searchButton {\n    min-width: 182px;\n  }\n  .detailsButton {\n    min-width: 220px;\n  }\n  .hideOnNormalWidth {\n    display: none;\n  }\n  .saveButtonContainer {\n    display: inline-block;\n  }\n  .saveButtonContainerNarrowScreen {\n    display: none;\n  }\n}\n</style>\n        <title>Voordat je verdergaat naar Google Zoeken</title>\n        <meta name=\"viewport\" content=\"initial-scale=1, maximum-scale=5, width=device-width\">\n        <link rel=\"shortcut icon\" href=\"//www.google.com/favicon.ico\">\n    </head>\n    <body>\n        <div class=\"signin\">\n            <a href=\"https://accounts.google.com/ServiceLogin?hl=nl&amp;continue=https://www.google.com/&amp;gae=cb-none\" class=\"basebutton hairlinebutton\">Inloggen</a>\n        </div>\n        <div class=\"box\">\n            <img src=\"//www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_68x28dp.png\" srcset=\"//www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_68x28dp.png 2x\" width=\"68\" height=\"28\" alt=\"Google\">\n            <h1>Voordat je verdergaat naar Google</h1>\n            <div class=\"contentText\">We gebruiken \n                <a href=\"https://policies.google.com/technologies/cookies?hl=nl&utm_source=ucb\" target=\"_blank\">cookies</a> en gegevens voor het volgende:\n                <ul>\n                    <li>Google-services leveren en onderhouden</li>\n                    <li>Uitval bijhouden en bescherming bieden tegen spam, fraude en misbruik</li>\n                    <li>Doelgroepbetrokkenheid en sitestatistieken meten om inzicht te krijgen in hoe onze services worden gebruikt en de kwaliteit van die services te verbeteren</li>\n                </ul>Als je Alles accepteren kiest, gebruiken we cookies en gegevens ook voor het volgende:\n                <ul>\n                    <li>Nieuwe services ontwikkelen en verbeteren</li>\n                    <li>Advertenties laten zien en de effectiviteit ervan meten</li>\n                    <li>Gepersonaliseerde content laten zien (afhankelijk van je instellingen)</li>\n                    <li>Gepersonaliseerde advertenties laten zien (afhankelijk van je instellingen)</li>\n                </ul>\n                <div>Als je Alles afwijzen kiest, gebruiken we cookies niet voor deze aanvullende doeleinden.</div>\n                <br>\n                <div>Niet-gepersonaliseerde content wordt beïnvloed door factoren zoals de content die je op dat moment bekijkt, activiteit in je actieve zoeksessie en je locatie. Niet-gepersonaliseerde advertenties worden beïnvloed door de content die je op dat moment bekijkt en je algemene locatie. Gepersonaliseerde content en advertenties kunnen ook relevantere resultaten, aanbevelingen en op jou toegespitste advertenties omvatten die zijn gebaseerd op eerdere activiteit van deze browser, zoals uitgevoerde Google-zoekopdrachten. We gebruiken cookies en gegevens ook om te zorgen dat de functionaliteit geschikt is voor je leeftijd, als dit relevant is.</div>\n                <br>Selecteer Meer opties om meer informatie te bekijken, waaronder informatie over hoe je je privacyinstellingen beheert. Je kunt ook altijd naar g.co/privacytools gaan.\n            </div>\n            <div class=\"saveButtonContainer\">\n                <form action=\"https://consent.google.com/save\" method=\"POST\" style=\"display:inline;\">\n                    <input type=\"hidden\" name=\"bl\" value=\"boq_identityfrontenduiserver_20230314.06_p1\">\n                    <input type=\"hidden\" name=\"x\" value=\"8\">\n                    <input type=\"hidden\" name=\"gl\" value=\"NL\">\n                    <input type=\"hidden\" name=\"m\" value=\"0\">\n                    <input type=\"hidden\" name=\"pc\" value=\"shp\">\n                    <input type=\"hidden\" name=\"continue\" value=\"https://www.google.com/\">\n                    <input type=\"hidden\" name=\"hl\" value=\"nl\">\n                    <input type=\"hidden\" name=\"uxe\" value=\"none\">\n                    <input type=\"hidden\" name=\"set_eom\" value=\"true\">\n                    <input type=\"submit\" value=\"Alles afwijzen\" class=\"basebutton button searchButton\" aria-label=\"Alles afwijzen\"/>\n                </form>\n                <form action=\"https://consent.google.com/save\" method=\"POST\" style=\"display:inline;\">\n                    <input type=\"hidden\" name=\"bl\" value=\"boq_identityfrontenduiserver_20230314.06_p1\">\n                    <input type=\"hidden\" name=\"x\" value=\"8\">\n                    <input type=\"hidden\" name=\"gl\" value=\"NL\">\n                    <input type=\"hidden\" name=\"m\" value=\"0\">\n                    <input type=\"hidden\" name=\"pc\" value=\"shp\">\n                    <input type=\"hidden\" name=\"continue\" value=\"https://www.google.com/\">\n                    <input type=\"hidden\" name=\"hl\" value=\"nl\">\n                    <input type=\"hidden\" name=\"uxe\" value=\"none\">\n                    <input type=\"hidden\" name=\"set_eom\" value=\"false\">\n                    <input type=\"hidden\" name=\"set_sc\" value=\"true\">\n                    <input type=\"hidden\" name=\"set_aps\" value=\"true\">\n                    <input type=\"submit\" value=\"Alles accepteren\" class=\"basebutton button searchButton\" aria-label=\"Alles accepteren\"/>\n                </form>\n            </div>\n            <div class=\"saveButtonContainerNarrowScreen\">\n                <form action=\"https://consent.google.com/save\" method=\"POST\" style=\"display:block;\">\n                    <input type=\"hidden\" name=\"bl\" value=\"boq_identityfrontenduiserver_20230314.06_p1\">\n                    <input type=\"hidden\" name=\"x\" value=\"8\">\n                    <input type=\"hidden\" name=\"gl\" value=\"NL\">\n                    <input type=\"hidden\" name=\"m\" value=\"0\">\n                    <input type=\"hidden\" name=\"pc\" value=\"shp\">\n                    <input type=\"hidden\" name=\"continue\" value=\"https://www.google.com/\">\n                    <input type=\"hidden\" name=\"hl\" value=\"nl\">\n                    <input type=\"hidden\" name=\"uxe\" value=\"none\">\n                    <input type=\"hidden\" name=\"set_eom\" value=\"false\">\n                    <input type=\"hidden\" name=\"set_sc\" value=\"true\">\n                    <input type=\"hidden\" name=\"set_aps\" value=\"true\">\n                    <input type=\"submit\" value=\"Alles accepteren\" class=\"basebutton button searchButton\" aria-label=\"Alles accepteren\"/>\n                </form>\n                <form action=\"https://consent.google.com/save\" method=\"POST\" style=\"display:block;\">\n                    <input type=\"hidden\" name=\"bl\" value=\"boq_identityfrontenduiserver_20230314.06_p1\">\n                    <input type=\"hidden\" name=\"x\" value=\"8\">\n                    <input type=\"hidden\" name=\"gl\" value=\"NL\">\n                    <input type=\"hidden\" name=\"m\" value=\"0\">\n                    <input type=\"hidden\" name=\"pc\" value=\"shp\">\n                    <input type=\"hidden\" name=\"continue\" value=\"https://www.google.com/\">\n                    <input type=\"hidden\" name=\"hl\" value=\"nl\">\n                    <input type=\"hidden\" name=\"uxe\" value=\"none\">\n                    <input type=\"hidden\" name=\"set_eom\" value=\"true\">\n                    <input type=\"submit\" value=\"Alles afwijzen\" class=\"basebutton button searchButton\" aria-label=\"Alles afwijzen\"/>\n                </form>\n            </div>\n            <div class=\"customButtonContainer\">\n                <a href=\"https://consent.google.com/dl?continue=https://www.google.com/&amp;gl=NL&amp;hl=nl&amp;pc=shp&amp;uxe=none&amp;src=1\" class=\"basebutton nolinebutton\">Meer opties</a>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <form action=\"https://consent.google.com/ml\" method=\"get\">\n                <select id=\"languageselect\" name=\"hl\">\n                    <option value=\"af\">Afrikaans</option>\n                    <option value=\"az\">azərbaycan</option>\n                    <option value=\"bs\">bosanski</option>\n                    <option value=\"ca\">català</option>\n                    <option value=\"cs\">Čeština</option>\n                    <option value=\"cy\">Cymraeg</option>\n                    <option value=\"da\">Dansk</option>\n                    <option value=\"de\">Deutsch</option>\n                    <option value=\"et\">eesti</option>\n                    <option value=\"en-GB\">English&nbsp;(United Kingdom)</option>\n                    <option value=\"en\">English&nbsp;(United States)</option>\n                    <option value=\"es\">Español&nbsp;(España)</option>\n                    <option value=\"es-419\">Español&nbsp;(Latinoamérica)</option>\n                    <option value=\"eu\">euskara</option>\n                    <option value=\"fil\">Filipino</option>\n                    <option value=\"fr-CA\">Français&nbsp;(Canada)</option>\n                    <option value=\"fr\">Français&nbsp;(France)</option>\n                    <option value=\"ga\">Gaeilge</option>\n                    <option value=\"gl\">galego</option>\n                    <option value=\"hr\">Hrvatski</option>\n                    <option value=\"id\">Indonesia</option>\n                    <option value=\"zu\">isiZulu</option>\n                    <option value=\"is\">íslenska</option>\n                    <option value=\"it\">Italiano</option>\n                    <option value=\"sw\">Kiswahili</option>\n                    <option value=\"lv\">latviešu</option>\n                    <option value=\"lt\">lietuvių</option>\n                    <option value=\"hu\">magyar</option>\n                    <option value=\"ms\">Melayu</option>\n                    <option value=\"nl\" selected>Nederlands</option>\n                    <option value=\"no\">norsk</option>\n                    <option value=\"uz\">o‘zbek</option>\n                    <option value=\"pl\">polski</option>\n                    <option value=\"pt-BR\">Português&nbsp;(Brasil)</option>\n                    <option value=\"pt-PT\">Português&nbsp;(Portugal)</option>\n                    <option value=\"ro\">română</option>\n                    <option value=\"sq\">shqip</option>\n                    <option value=\"sk\">Slovenčina</option>\n                    <option value=\"sl\">slovenščina</option>\n                    <option value=\"sr-Latn\">srpski (latinica)</option>\n                    <option value=\"fi\">Suomi</option>\n                    <option value=\"sv\">Svenska</option>\n                    <option value=\"vi\">Tiếng Việt</option>\n                    <option value=\"tr\">Türkçe</option>\n                    <option value=\"el\">Ελληνικά</option>\n                    <option value=\"be\">беларуская</option>\n                    <option value=\"bg\">български</option>\n                    <option value=\"ky\">кыргызча</option>\n                    <option value=\"kk\">қазақ тілі</option>\n                    <option value=\"mk\">македонски</option>\n                    <option value=\"mn\">монгол</option>\n                    <option value=\"ru\">Русский</option>\n                    <option value=\"sr\">српски</option>\n                    <option value=\"uk\">Українська</option>\n                    <option value=\"ka\">ქართული</option>\n                    <option value=\"hy\">հայերեն</option>\n                    <option value=\"iw\">עברית</option>\n                    <option value=\"ur\">اردو</option>\n                    <option value=\"ar\">العربية</option>\n                    <option value=\"fa\">فارسی</option>\n                    <option value=\"am\">አማርኛ</option>\n                    <option value=\"ne\">नेपाली</option>\n                    <option value=\"mr\">मराठी</option>\n                    <option value=\"hi\">हिन्दी</option>\n                    <option value=\"as\">অসমীয়া</option>\n                    <option value=\"bn\">বাংলা</option>\n                    <option value=\"pa\">ਪੰਜਾਬੀ</option>\n                    <option value=\"gu\">ગુજરાતી</option>\n                    <option value=\"or\">ଓଡ଼ିଆ</option>\n                    <option value=\"ta\">தமிழ்</option>\n                    <option value=\"te\">తెలుగు</option>\n                    <option value=\"kn\">ಕನ್ನಡ</option>\n                    <option value=\"ml\">മലയാളം</option>\n                    <option value=\"si\">සිංහල</option>\n                    <option value=\"th\">ไทย</option>\n                    <option value=\"lo\">ລາວ</option>\n                    <option value=\"my\">မြန်မာ</option>\n                    <option value=\"km\">ខ្មែរ</option>\n                    <option value=\"ko\">한국어</option>\n                    <option value=\"ja\">日本語</option>\n                    <option value=\"zh-CN\">简体中文</option>\n                    <option value=\"zh-TW\">繁體中文</option>\n                    <option value=\"zh-HK\">繁體中文&nbsp;(香港)</option>\n                </select>\n                <input type=\"hidden\" name=\"oldhl\" value=\"nl\">\n                <input type=\"hidden\" name=\"gl\" value=\"NL\">\n                <input type=\"hidden\" name=\"m\" value=\"0\">\n                <input type=\"hidden\" name=\"pc\" value=\"shp\">\n                <input type=\"hidden\" name=\"continue\" value=\"https://www.google.com/\">\n                <input type=\"hidden\" name=\"src\" value=\"1\">\n                <input type=\"submit\" value=\"Taal wijzigen\">\n            </form>\n            <a href=\"https://policies.google.com/privacy?hl=nl&utm_source=ucb\">Privacybeleid</a>\n            <a href=\"https://policies.google.com/terms?hl=nl&utm_source=ucb\">Servicevoorwaarden</a>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{Address}}/a/stats",
+					"protocol": "http",
+					"host": [
+						"{{Address}}"
+					],
+					"path": [
+						"a",
+						"stats"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "stats",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{Address}}/a/stats",
+							"protocol": "http",
+							"host": [
+								"{{Address}}"
+							],
+							"path": [
+								"a",
+								"stats"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 Mar 2023 23:41:31 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "110"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"original\": \"https://www.google.com\",\n    \"shortened\": \"a\",\n    \"visits\": {\n        \"2023-03-18\": 0,\n        \"2023-03-19\": 0,\n        \"2023-03-20\": 1\n    }\n}"
+				}
+			]
+		}
+	]
+}
