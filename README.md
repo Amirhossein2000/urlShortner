@@ -24,6 +24,6 @@ Unit-Tests exist for all the endpoints you can
 check [this](internal/handlers/handlers_test.go)
 file to see all.
 
-## URL generator
+## URL Generator
 
 Instead of random string we have a Base26 Incremental solution to make the URL as short as possible.

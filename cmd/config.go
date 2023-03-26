@@ -1,6 +1,9 @@
 package main
 
-import "os"
+import (
+	"os"
+	"urlShortner/internal/consts"
+)
 
 type Config struct {
 	Server ServerConfig
@@ -13,7 +16,7 @@ type ServerConfig struct {
 func GetConfig() *Config {
 	address := os.Getenv("SERVER_ADDRESS")
 	if address == "" {
-		address = ":8080"
+		address = consts.ServerDefaultAddress
 	}
 	return &Config{Server: ServerConfig{Address: address}}
 }
